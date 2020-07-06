@@ -1,0 +1,16 @@
+[Unit]
+Description=GpuOwl
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/gpuowl.pid
+ExecStart=/home/sel/gpuowl/gpuowl ...
+KillSignal=SIGINT
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=gpuowl.service
+
