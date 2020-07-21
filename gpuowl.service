@@ -4,17 +4,17 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-Type=simple
+Type=oneshot
 PIDFile=/run/gpuowl.pid
 ExecStart=/home/sel/exec_and_ctrl.sh
 KillSignal=SIGINT
-Restart=on-failure
-RestartSec=2
-TimeoutStartSec=15
+#Restart=on-failure
+#RestartSec=2
+#TimeoutStartSec=15
 ExecStop=pkill --signal SIGINT gpuowl
 ExecStopPost=/opt/rocm-3.3.0/bin/rocm-smi --setprofile 2
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 Alias=gpuowl.service
 
