@@ -7,6 +7,7 @@ Wants=network-online.target
 Type=oneshot
 PIDFile=/run/gpuowl.pid
 ExecStart=/home/sel/exec_and_ctrl.sh
+RemainAfterExit=true
 KillSignal=SIGINT
 #Restart=on-failure
 #RestartSec=2
