@@ -12,3 +12,6 @@ Prepare the benchmarks directory.
 
 ### gpuowlbench.sh
 Run the gpuowl benchmarks.
+
+### copy_proofs.sh
+Copy proof files to abackup location.
