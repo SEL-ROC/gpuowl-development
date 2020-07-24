@@ -3,7 +3,8 @@
 set -o xtrace
 
 
- [[ -z "$2" ]] && echo "Must specify destination directory." || [[ -z "$1" ]] && echo "Must specify original directory."; exit;
+ [[ -z "$2" ]] && echo "Must specify destination directory."; exit;
+ [[ -z "$1" ]] && echo "Must specify original and destination directory."; exit;
 
 # Copy files to upload location.
 find $1 -name '*.proof' -exec cp -v -n '{}' $2 \;
