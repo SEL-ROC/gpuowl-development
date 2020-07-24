@@ -2,9 +2,11 @@
 
 set -o xtrace
 
-if [[ -z "$2" -a -n "$1" ]]; then
+if [[ $# -lt 2 ]]; then
   echo "Must specify destination directory."; exit;
-elif [[ -z "$1" ]]; then
+fi
+
+if [[ $# -lt 1 ]]; then
   echo "Must specify original and destination directory."; exit;
 fi
 
