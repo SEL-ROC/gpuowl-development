@@ -2,17 +2,9 @@
 
 set -o xtrace
 
-if [[ $# -lt 2 ]]; then
-  echo "Must specify destination directory."; exit;
-fi
-
-if [[ $# -lt 1 ]]; then
+if [[ $# -eq 2 ]]; then
+  # Copy files to upload location.
+find $1 -name '*.proof' -exec cp -v -n '{}' $2 \;
+elif [[ $# -lt 2 ]]; then
   echo "Must specify original and destination directory."; exit;
 fi
-
-# Copy files to upload location.
-find $1 -name '*.proof' -exec cp -v -n '{}' $2 \;
-
-# Not nessary anymore ## Also copy to a backup location.
-# [[ ! -z "$3" ]] && find $1 -name '*.proof' -exec cp -v -n '{}' $3 \; || echo "No backup location specified, proof files still copied to upload location."
- 
