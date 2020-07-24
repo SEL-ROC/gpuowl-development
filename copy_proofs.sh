@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -o xtrace
+
 if [[ $# -eq 2 ]]; then
   if [[ "$1" == "$2" ]]; then
     echo "Cannot copy to the same directory."; exit;
