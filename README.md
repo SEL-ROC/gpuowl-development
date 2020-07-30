@@ -15,3 +15,6 @@ Run the gpuowl benchmarks.
 
 ### copy_proofs.sh
 Copy proof files to a backup location.
+
+### count_archived_proofs.sh
+Count archived proof files.
