@@ -20,7 +20,7 @@ echo ***********************************************
 # Last known Mersenne prime
 ./gpuowl -prp 82589933 -iters 100000 -log 5000 -cpu $1 -results bench-82589933-$1-$COUNTER.txt
 # Largest SEL computed exponent
-./gpuowl -prp 333689743 -iters 100000 -log 5000 -cpu $1 -results bench-332412937-$1-$COUNTER.txt
+./gpuowl -prp 333689743 -iters 100000 -log 5000 -cpu $1 -results bench-333689743-$1-$COUNTER.txt
 
 let COUNTER=COUNTER+1 
 done
